@@ -19,6 +19,14 @@
     <repository>
       <include>true</include>
       <metadata>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+        <source>PROJECT</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
         <id>jboss-public-repository-group</id>
         <url>https://repository.jboss.org/nexus/content/groups/public/</url>
         <source>PROJECT</source>
