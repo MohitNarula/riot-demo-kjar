@@ -10,18 +10,25 @@
     <task-event-listeners/>
     <globals/>
     <work-item-handlers>
-        <work-item-handler>
-            <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.riot.LastSummonerMatchWorkitemHandler("RGAPI-da139ccb-1562-4f4b-9f83-37854a2a2dc3")</identifier>
-            <parameters/>
-            <name>RiotSummonerLastMatch</name>
-        </work-item-handler>
-        <work-item-handler>
+          <work-item-handler>
             <resolver>mvel</resolver>
             <identifier>new org.jbpm.process.workitem.riot.SummonerInfoWorkitemHandler("RGAPI-da139ccb-1562-4f4b-9f83-37854a2a2dc3")</identifier>
             <parameters/>
             <name>RiotSummonerInfo</name>
-        </work-item-handler>
+          </work-item-handler>
+          <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.riot.LastSummonerMatchWorkitemHandler("RGAPI-da139ccb-1562-4f4b-9f83-37854a2a2dc3")</identifier>
+            <parameters/>
+            <name>RiotSummonerLastMatch</name>
+          </work-item-handler>
+          <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.riot.MatchesInfoWorkitemHandler("RGAPI-da139ccb-1562-4f4b-9f83-37854a2a2dc3")</identifier>
+            <parameters/>
+            <name>RiotMatchInfo</name>
+          </work-item-handler>
+
     </work-item-handlers>
     <environment-entries/>
     <configurations/>
