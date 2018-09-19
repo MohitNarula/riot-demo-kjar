@@ -9,8 +9,8 @@
   <name>business-application-kjar</name>
   <properties>
     <version.org.kie>7.12.0-SNAPSHOT</version.org.kie>
-    <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   <dependencies>
@@ -30,15 +30,6 @@
       <id>jitpack.io</id>
       <name>JitPack Repository</name>
       <url>https://jitpack.io</url>
-      <layout>default</layout>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>daily</updatePolicy>
-      </snapshots>
     </repository>
   </repositories>
   <build>
