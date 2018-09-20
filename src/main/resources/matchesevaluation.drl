@@ -35,10 +35,9 @@ then
     }
     $averages.setTotalTowerKills( $averages.getTotalTowerKills() + $match.getTeams().get(0).getTowerKills() );
     
-    
-    System.out.println("************ IS WIN - : " + $match.getTeams().get(0).getWin());
-    
-    //$averages.setTotalWins( $averages.getTotalWins() + $match.getTeams().get(0).getTowerKills() );
+    if($match.getTeams().get(0).getWin().equals("Win")) {
+        $averages.setTotalWins( $averages.getTotalWins() + 1 );
+    }
     
     
 end
