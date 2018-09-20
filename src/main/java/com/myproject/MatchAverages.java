@@ -2,17 +2,68 @@ package com.myproject;
 
 import java.io.Serializable;
 
-public class MatchAverages {
+public class MatchAverages implements Serializable{
+
+    private int totalMatches;
+    private int totalBaronKills;
+    private int totalDragonKills;
+    private int totalFirstBlood;
+    private int totalTowerKills;
+    private int totalWins;
 
     private long avgBaronKills;
     private long avgDragonKills;
-    private long percentFirstBaron;
-    private long percentFirstDragon;
-    private long percentFirstInhibitor;
-    private long percentFirstHerald;
-    private long avgInhibitorKills;
-    private long avgHeraldKills;
-    private long percentWin;
+    private long avgFirstBlood;
+    private long avgTowerKills;
+    private long svgTotalWins;
+
+    public int getTotalMatches() {
+        return totalMatches;
+    }
+
+    public void setTotalMatches(int totalMatches) {
+        this.totalMatches = totalMatches;
+    }
+
+    public int getTotalBaronKills() {
+        return totalBaronKills;
+    }
+
+    public void setTotalBaronKills(int totalBaronKills) {
+        this.totalBaronKills = totalBaronKills;
+    }
+
+    public int getTotalDragonKills() {
+        return totalDragonKills;
+    }
+
+    public void setTotalDragonKills(int totalDragonKills) {
+        this.totalDragonKills = totalDragonKills;
+    }
+
+    public int getTotalFirstBlood() {
+        return totalFirstBlood;
+    }
+
+    public void setTotalFirstBlood(int totalFirstBlood) {
+        this.totalFirstBlood = totalFirstBlood;
+    }
+
+    public int getTotalTowerKills() {
+        return totalTowerKills;
+    }
+
+    public void setTotalTowerKills(int totalTowerKills) {
+        this.totalTowerKills = totalTowerKills;
+    }
+
+    public int getTotalWins() {
+        return totalWins;
+    }
+
+    public void setTotalWins(int totalWins) {
+        this.totalWins = totalWins;
+    }
 
     public long getAvgBaronKills() {
         return avgBaronKills;
@@ -30,59 +81,28 @@ public class MatchAverages {
         this.avgDragonKills = avgDragonKills;
     }
 
-    public long getPercentFirstBaron() {
-        return percentFirstBaron;
+    public long getAvgFirstBlood() {
+        return avgFirstBlood;
     }
 
-    public void setPercentFirstBaron(long percentFirstBaron) {
-        this.percentFirstBaron = percentFirstBaron;
+    public void setAvgFirstBlood(long avgFirstBlood) {
+        this.avgFirstBlood = avgFirstBlood;
     }
 
-    public long getPercentFirstDragon() {
-        return percentFirstDragon;
+    public long getAvgTowerKills() {
+        return avgTowerKills;
     }
 
-    public void setPercentFirstDragon(long percentFirstDragon) {
-        this.percentFirstDragon = percentFirstDragon;
+    public void setAvgTowerKills(long avgTowerKills) {
+        this.avgTowerKills = avgTowerKills;
     }
 
-    public long getPercentFirstInhibitor() {
-        return percentFirstInhibitor;
+    public long getSvgTotalWins() {
+        return svgTotalWins;
     }
 
-    public void setPercentFirstInhibitor(long percentFirstInhibitor) {
-        this.percentFirstInhibitor = percentFirstInhibitor;
-    }
-
-    public long getPercentFirstHerald() {
-        return percentFirstHerald;
-    }
-
-    public void setPercentFirstHerald(long percentFirstHerald) {
-        this.percentFirstHerald = percentFirstHerald;
-    }
-
-    public long getAvgInhibitorKills() {
-        return avgInhibitorKills;
-    }
-
-    public void setAvgInhibitorKills(long avgInhibitorKills) {
-        this.avgInhibitorKills = avgInhibitorKills;
-    }
-
-    public long getAvgHeraldKills() {
-        return avgHeraldKills;
-    }
-
-    public void setAvgHeraldKills(long avgHeraldKills) {
-        this.avgHeraldKills = avgHeraldKills;
-    }
-
-    public long getPercentWin() {
-        return percentWin;
-    }
-
-    public void setPercentWin(long percentWin) {
-        this.percentWin = percentWin;
+    public void setSvgTotalWins(long svgTotalWins) {
+        this.svgTotalWins = svgTotalWins;
     }
 }
+
