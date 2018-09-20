@@ -104,5 +104,23 @@ public class MatchAverages implements Serializable{
     public void setAvgTotalWins(long avgTotalWins) {
         this.avgTotalWins = avgTotalWins;
     }
+    
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        String NL = System.getProperty("line.separator");
+
+        result.append(this.getClass().getName() + " Object {" + NL);
+        result.append(" totalMatches: " + totalMatches + NL);
+        result.append(" totalBaronKills: " + totalBaronKills + NL);
+        result.append(" totalDragonKills: " + totalDragonKills + NL );
+        result.append(" totalFirstBlood: " + totalFirstBlood + NL);
+        result.append(" totalTowerKills: " + totalTowerKills + NL);
+        result.append(" totalWins: " + totalWins + NL);
+        result.append(" totalFirstBlood: " + totalFirstBlood + NL);
+        result.append("}");
+
+        return result.toString();
+
+    }
 }
 
