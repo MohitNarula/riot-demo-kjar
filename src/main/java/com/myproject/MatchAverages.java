@@ -1,6 +1,8 @@
 package com.myproject;
 
-public class MatchAverages {
+import java.io.Serializable;
+
+public class MatchAverages implements Serializable {
 
     private int avgBaronKills;
     private int avgDragonKills;
