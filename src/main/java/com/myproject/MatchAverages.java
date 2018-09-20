@@ -42,11 +42,11 @@ public class MatchAverages {
         return percentFirstDragon;
     }
 
-    public void setPercentFirstDragon(int percentFirstDragon) {
+    public void setPercentFirstDragon(long percentFirstDragon) {
         this.percentFirstDragon = percentFirstDragon;
     }
 
-    public int getPercentFirstInhibitor() {
+    public long getPercentFirstInhibitor() {
         return percentFirstInhibitor;
     }
 
