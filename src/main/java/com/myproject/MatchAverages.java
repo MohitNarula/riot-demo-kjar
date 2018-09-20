@@ -4,11 +4,11 @@ import java.io.Serializable;
 
 public class MatchAverages implements Serializable{
 
-    private int totalMatches;
-    private int totalBaronKills;
-    private int totalDragonKills;
-    private int totalFirstBlood;
-    private int totalTowerKills;
+    private int totalMatches = 0;
+    private int totalBaronKills = 0;
+    private int totalDragonKills = 0;
+    private int totalFirstBlood = 0;
+    private int totalTowerKills = 0;
     private int totalWins;
 
     private long avgBaronKills;
