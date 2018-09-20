@@ -2,5 +2,5 @@ rule averageBaronKills ruleflow-group 'teamstats'
 when
 
 then
-
+    System.out.println("\n\n************** IN THE RULE!!!")
 end
