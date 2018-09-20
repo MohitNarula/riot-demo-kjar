@@ -30,4 +30,5 @@ then
     //$averages.setTotalBaronKills( $averages.getTotalBaronKills() + $match. );
     //$averages.setAvgBaronKills(3);
     System.out.println("TEAM STATS: " + $match.getTeams().get(0));
+    System.out.println("TEAM2 STATS: " + $match.getTeams().get(2));
 end
