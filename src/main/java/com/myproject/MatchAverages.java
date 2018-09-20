@@ -110,6 +110,9 @@ public class MatchAverages implements Serializable{
         String NL = System.getProperty("line.separator");
 
         result.append(this.getClass().getName() + " {" + NL);
+        
+        result.append(" ** TOTALS ** " + NL);
+        
         result.append(" totalMatches: " + totalMatches + NL);
         result.append(" totalBaronKills: " + totalBaronKills + NL);
         result.append(" totalDragonKills: " + totalDragonKills + NL );
@@ -117,6 +120,14 @@ public class MatchAverages implements Serializable{
         result.append(" totalTowerKills: " + totalTowerKills + NL);
         result.append(" totalWins: " + totalWins + NL);
         result.append(" totalFirstBlood: " + totalFirstBlood + NL);
+        
+        result.append(" ** AVERAGES ** " + NL);
+        result.append(" avgBaronKills: " + avgBaronKills + NL);
+        result.append(" avgDragonKills: " + avgDragonKills + NL);
+        result.append(" avgFirstBlood: " + avgFirstBlood + NL);
+        result.append(" avgTowerKills: " + avgTowerKills + NL);
+        result.append(" avgTotalWins: " + avgTotalWins + NL);
+        
         result.append("}");
 
         return result.toString();
