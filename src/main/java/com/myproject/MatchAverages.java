@@ -98,7 +98,7 @@ public class MatchAverages implements Serializable{
     }
 
     public long getAvgTotalWins() {
-        return svgTotalWins;
+        return avgTotalWins;
     }
 
     public void setAvgTotalWins(long avgTotalWins) {
