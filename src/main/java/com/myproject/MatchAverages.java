@@ -109,7 +109,7 @@ public class MatchAverages implements Serializable{
         StringBuilder result = new StringBuilder();
         String NL = System.getProperty("line.separator");
 
-        result.append(this.getClass().getName() + " Object {" + NL);
+        result.append(this.getClass().getName() + " {" + NL);
         result.append(" totalMatches: " + totalMatches + NL);
         result.append(" totalBaronKills: " + totalBaronKills + NL);
         result.append(" totalDragonKills: " + totalDragonKills + NL );
