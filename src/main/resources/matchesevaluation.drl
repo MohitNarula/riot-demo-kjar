@@ -30,7 +30,7 @@ then
     $averages.setTotalMatches( $averages.getTotalMatches() + 1 );
     $averages.setTotalBaronKills( $averages.getTotalBaronKills() + $match.getTeams().get(0).getBaronKills() );
     $averages.setTotalDragonKills( $averages.getTotalDragonKills() + $match.getTeams().get(0).getDragonKills() );
-    if($match.getTeams().get(0).isFirstBlood() {
+    if($match.getTeams().get(0).isFirstBlood()) {
         $averages.setTotalFirstBlood( $averages.getTotalFirstBlood() + 1 );
     }
     $averages.setTotalTowerKills( $averages.getTotalTowerKills() + $match.getTeams().get(0).getTowerKills() );
