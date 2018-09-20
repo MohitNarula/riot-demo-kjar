@@ -33,3 +33,16 @@ then
         $averages.setTotalWins( $averages.getTotalWins() + 1 );
     }
 end
+
+rule calculateaverages
+salience -100
+ruleflow-group 'teamstats'
+when
+    $averages : MatchAverages()
+then
+    $averages.setAvgBaronKills($averages.getTotalBaronKills() / $average.getTotalMatches());
+    $averages.setAvgDragonKills($averages.getTotalDragonKills() / $average.getTotalMatches());
+    $averages.setAvgFirstBlood($averages.getTotalFirstBlood() / $average.getTotalMatches());
+    $averages.setAvgTowerKills($averages.getTotalTowerKills() / $average.getTotalMatches());
+    $averages.setAvgTotalWins($averages.getTotalWins() / $average.getTotalMatches());
+end
