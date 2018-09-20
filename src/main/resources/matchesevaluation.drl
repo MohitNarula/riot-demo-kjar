@@ -27,8 +27,18 @@ when
     $averages : MatchAverages()
 then
     System.out.println("ABOUT TO EVALUATE MATCH : " + $match);
-    //$averages.setTotalBaronKills( $averages.getTotalBaronKills() + $match. );
-    //$averages.setAvgBaronKills(3);
-    System.out.println("TEAM STATS: " + $match.getTeams().get(0));
-    System.out.println("TEAM2 STATS: " + $match.getTeams().get(2));
+    $averages.setTotalMatches( $averages.getTotalMatches() + 1 );
+    $averages.setTotalBaronKills( $averages.getTotalBaronKills() + $match.getTeams().get(0).getBaronKills() );
+    $averages.setTotalDragonKills( $averages.getTotalDragonKills() + $match.getTeams().get(0).getDragonKills() );
+    if($match.getTeams().get(0).isFirstBlood() {
+        $averages.setTotalFirstBlood( $averages.getTotalFirstBlood() + 1 );
+    }
+    $averages.setTotalTowerKills( $averages.getTotalTowerKills() + $match.getTeams().get(0).getTowerKills() );
+    
+    
+    System.out.println("************ IS WIN - : " + $match.getTeams().get(0).getWin());
+    
+    //$averages.setTotalWins( $averages.getTotalWins() + $match.getTeams().get(0).getTowerKills() );
+    
+    
 end
