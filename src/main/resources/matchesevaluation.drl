@@ -8,10 +8,11 @@ no-loop
 when
     $matches : List()
     $match : Match() from $matches
-    // $averages : MatchAverages()
+    $averages : MatchAverages()
     
 then
     System.out.println("INSERTING MATCH: " + $match);
+    $averages.setTotalMatches($matches.size());
     insert($match);
     //System.out.println("\n\n************** IN THE RULE!!!");
     //System.out.println("SIZE: " + $matches.size());
@@ -26,5 +27,7 @@ when
     $averages : MatchAverages()
 then
     System.out.println("ABOUT TO EVALUATE MATCH : " + $match);
-    $averages.setAvgBaronKills(3);
+    //$averages.setTotalBaronKills( $averages.getTotalBaronKills() + $match. );
+    //$averages.setAvgBaronKills(3);
+    System.out.println("TEAM STATS: " + $match.getTeams().get(0));
 end
