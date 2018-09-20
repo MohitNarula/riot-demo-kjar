@@ -15,7 +15,7 @@ public class MatchAverages implements Serializable{
     private long avgDragonKills;
     private long avgFirstBlood;
     private long avgTowerKills;
-    private long svgTotalWins;
+    private long avgTotalWins;
 
     public int getTotalMatches() {
         return totalMatches;
@@ -97,12 +97,12 @@ public class MatchAverages implements Serializable{
         this.avgTowerKills = avgTowerKills;
     }
 
-    public long getSvgTotalWins() {
+    public long getAvgTotalWins() {
         return svgTotalWins;
     }
 
-    public void setSvgTotalWins(long svgTotalWins) {
-        this.svgTotalWins = svgTotalWins;
+    public void setAvgTotalWins(long avgTotalWins) {
+        this.avgTotalWins = avgTotalWins;
     }
 }
 
