@@ -2,43 +2,43 @@ package com.myproject;
 
 import java.io.Serializable;
 
-public class MatchAverages implements Serializable {
+public class MatchAverages {
 
-    private int avgBaronKills;
-    private int avgDragonKills;
-    private int percentFirstBaron;
-    private int percentFirstDragon;
-    private int percentFirstInhibitor;
-    private int percentFirstHerald;
-    private int avgInhibitorKills;
-    private int avgHeraldKills;
-    private int percentWin;
+    private long avgBaronKills;
+    private long avgDragonKills;
+    private long percentFirstBaron;
+    private long percentFirstDragon;
+    private long percentFirstInhibitor;
+    private long percentFirstHerald;
+    private long avgInhibitorKills;
+    private long avgHeraldKills;
+    private long percentWin;
 
-    public int getAvgBaronKills() {
+    public long getAvgBaronKills() {
         return avgBaronKills;
     }
 
-    public void setAvgBaronKills(int avgBaronKills) {
+    public void setAvgBaronKills(long avgBaronKills) {
         this.avgBaronKills = avgBaronKills;
     }
 
-    public int getAvgDragonKills() {
+    public long getAvgDragonKills() {
         return avgDragonKills;
     }
 
-    public void setAvgDragonKills(int avgDragonKills) {
+    public void setAvgDragonKills(long avgDragonKills) {
         this.avgDragonKills = avgDragonKills;
     }
 
-    public int getPercentFirstBaron() {
+    public long getPercentFirstBaron() {
         return percentFirstBaron;
     }
 
-    public void setPercentFirstBaron(int percentFirstBaron) {
+    public void setPercentFirstBaron(long percentFirstBaron) {
         this.percentFirstBaron = percentFirstBaron;
     }
 
-    public int getPercentFirstDragon() {
+    public long getPercentFirstDragon() {
         return percentFirstDragon;
     }
 
@@ -50,40 +50,39 @@ public class MatchAverages implements Serializable {
         return percentFirstInhibitor;
     }
 
-    public void setPercentFirstInhibitor(int percentFirstInhibitor) {
+    public void setPercentFirstInhibitor(long percentFirstInhibitor) {
         this.percentFirstInhibitor = percentFirstInhibitor;
     }
 
-    public int getPercentFirstHerald() {
+    public long getPercentFirstHerald() {
         return percentFirstHerald;
     }
 
-    public void setPercentFirstHerald(int percentFirstHerald) {
+    public void setPercentFirstHerald(long percentFirstHerald) {
         this.percentFirstHerald = percentFirstHerald;
     }
 
-    public int getAvgInhibitorKills() {
+    public long getAvgInhibitorKills() {
         return avgInhibitorKills;
     }
 
-    public void setAvgInhibitorKills(int avgInhibitorKills) {
+    public void setAvgInhibitorKills(long avgInhibitorKills) {
         this.avgInhibitorKills = avgInhibitorKills;
     }
 
-    public int getAvgHeraldKills() {
+    public long getAvgHeraldKills() {
         return avgHeraldKills;
     }
 
-    public void setAvgHeraldKills(int avgHeraldKills) {
+    public void setAvgHeraldKills(long avgHeraldKills) {
         this.avgHeraldKills = avgHeraldKills;
     }
 
-    public int getPercentWin() {
+    public long getPercentWin() {
         return percentWin;
     }
 
-    public void setPercentWin(int percentWin) {
+    public void setPercentWin(long percentWin) {
         this.percentWin = percentWin;
     }
 }
-
