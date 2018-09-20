@@ -1,12 +1,15 @@
 import java.util.List;
 import net.rithms.riot.api.endpoints.match.dto.Match;
+import com.myproject.MatchAverages;
 
 rule averageBaronKills 
 ruleflow-group 'teamstats'
 no-loop
 when
     $matches : List()
+    $averages : MatchAverages()
 then
     System.out.println("\n\n************** IN THE RULE!!!");
     System.out.println("SIZE: " + $matches.size());
+    $averages.setAvgBaronKills(3);
 end
