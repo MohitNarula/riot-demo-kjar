@@ -10,7 +10,6 @@ when
     $match : Match() from $matches
     $averages : MatchAverages()
 then
-    System.out.println("***** 1");
     $averages.setTotalMatches($matches.size());
     insert($match);
 end
@@ -21,8 +20,6 @@ when
     $match : Match()
     $averages : MatchAverages()
 then
-    System.out.println("***** 2");
-    $averages.setTotalMatches( $averages.getTotalMatches() + 1 );
     $averages.setTotalBaronKills( $averages.getTotalBaronKills() + $match.getTeams().get(0).getBaronKills() );
     $averages.setTotalDragonKills( $averages.getTotalDragonKills() + $match.getTeams().get(0).getDragonKills() );
     if($match.getTeams().get(0).isFirstBlood()) {
@@ -41,7 +38,6 @@ ruleflow-group 'teamstats'
 when
     $averages : MatchAverages()
 then
-    System.out.println("***** 3");
     $averages.setAvgBaronKills((float) ((float)$averages.getTotalBaronKills() / (float)$averages.getTotalMatches()));
     $averages.setAvgDragonKills((float) ((float)$averages.getTotalDragonKills() / (float)$averages.getTotalMatches()));
     $averages.setAvgFirstBlood((float) ((float)$averages.getTotalFirstBlood() / (float)$averages.getTotalMatches()));
