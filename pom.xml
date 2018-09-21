@@ -26,11 +26,6 @@
       <name>JBoss Public Repository Group</name>
       <url>https://repository.jboss.org/nexus/content/groups/public/</url>
     </repository>
-    <repository>
-      <id>jitpack.io</id>
-      <name>JitPack Repository</name>
-      <url>https://jitpack.io</url>
-    </repository>
   </repositories>
   <build>
     <plugins>
