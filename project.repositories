@@ -11,14 +11,6 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-        <source>PROJECT</source>
-      </metadata>
-    </repository>
-    <repository>
-      <include>true</include>
-      <metadata>
         <id>central</id>
         <url>https://repo.maven.apache.org/maven2</url>
         <source>PROJECT</source>
