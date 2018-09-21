@@ -4,7 +4,7 @@
     <audit-persistence-unit>org.jbpm.domain</audit-persistence-unit>
     <audit-mode>JPA</audit-mode>
     <persistence-mode>JPA</persistence-mode>
-    <runtime-strategy>SINGLETON</runtime-strategy>
+    <runtime-strategy>PER_PROCESS_INSTANCE</runtime-strategy>
     <marshalling-strategies/>
     <event-listeners/>
     <task-event-listeners/>
@@ -12,7 +12,7 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.riot.LastSummonerMatchWorkitemHandler(RGAPI-d2bfa826-1486-430b-9680-b3a7d15c39cc")</identifier>
+            <identifier>new org.jbpm.process.workitem.riot.LastSummonerMatchWorkitemHandler("RGAPI-d2bfa826-1486-430b-9680-b3a7d15c39cc")</identifier>
             <parameters/>
             <name>RiotSummonerLastMatch</name>
         </work-item-handler>

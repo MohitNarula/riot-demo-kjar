@@ -10,6 +10,7 @@ when
     $match : Match() from $matches
     $averages : MatchAverages()
 then
+ System.out.println("****** in rule !");
     $averages.setTotalMatches($matches.size());
     insert($match);
 end
@@ -20,6 +21,7 @@ when
     $match : Match()
     $averages : MatchAverages()
 then
+ System.out.println("****** in rule !");
     $averages.setTotalBaronKills( $averages.getTotalBaronKills() + $match.getTeams().get(0).getBaronKills() );
     $averages.setTotalDragonKills( $averages.getTotalDragonKills() + $match.getTeams().get(0).getDragonKills() );
     if($match.getTeams().get(0).isFirstBlood()) {
