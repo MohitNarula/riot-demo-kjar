@@ -1,4 +1,4 @@
-KJAR Initial Content
+RIOT Demo KJAR
 =============================
 
 Your project description here.
