@@ -1,5 +1,6 @@
 import java.util.List;
 import net.rithms.riot.api.endpoints.match.dto.Match;
+import net.rithms.riot.api.endpoints.match.dto.TeamStats;
 import com.myproject.MatchAverages;
 
 rule insertmatchdata 
@@ -10,7 +11,6 @@ when
     $match : Match() from $matches
     $averages : MatchAverages()
 then
- System.out.println("****** in rule !");
     $averages.setTotalMatches($matches.size());
     insert($match);
 end
@@ -21,17 +21,29 @@ when
     $match : Match()
     $averages : MatchAverages()
 then
- System.out.println("****** in rule !");
     $averages.setTotalBaronKills( $averages.getTotalBaronKills() + $match.getTeams().get(0).getBaronKills() );
     $averages.setTotalDragonKills( $averages.getTotalDragonKills() + $match.getTeams().get(0).getDragonKills() );
-    if($match.getTeams().get(0).isFirstBlood()) {
-        $averages.setTotalFirstBlood( $averages.getTotalFirstBlood() + 1 );
-    }
     $averages.setTotalTowerKills( $averages.getTotalTowerKills() + $match.getTeams().get(0).getTowerKills() );
-    
-    if($match.getTeams().get(0).getWin().equals("Win")) {
-        $averages.setTotalWins( $averages.getTotalWins() + 1 );
-    }
+end
+
+rule evaluatematchfirstbloods
+ruleflow-group 'teamstats'
+when
+    $match : Match($teams : teams)
+    $averages : MatchAverages()
+    $teamstats : TeamStats(firstBlood == true) from $teams.get(0)
+then
+    $averages.setTotalFirstBlood( $averages.getTotalFirstBlood() + 1 );
+end
+
+rule evaluatematchwins
+ruleflow-group 'teamstats'
+when
+    $match : Match($teams : teams)
+    $averages : MatchAverages()
+    $teamstats : TeamStats(win == "Win") from $teams.get(0)
+then
+    $averages.setTotalWins( $averages.getTotalWins() + 1 );
 end
 
 rule calculateaverages
@@ -40,8 +52,6 @@ ruleflow-group 'teamstats'
 when
     $averages : MatchAverages()
 then
-    System.out.println("****** in calc averages rule !");
-
     $averages.setAvgBaronKills((float) ((float)$averages.getTotalBaronKills() / (float)$averages.getTotalMatches()));
     $averages.setAvgDragonKills((float) ((float)$averages.getTotalDragonKills() / (float)$averages.getTotalMatches()));
     $averages.setAvgFirstBlood((float) ((float)$averages.getTotalFirstBlood() / (float)$averages.getTotalMatches()));

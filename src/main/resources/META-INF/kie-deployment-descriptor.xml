@@ -12,19 +12,19 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.riot.LastSummonerMatchWorkitemHandler("RGAPI-d2bfa826-1486-430b-9680-b3a7d15c39cc")</identifier>
+            <identifier>new org.jbpm.process.workitem.riot.LastSummonerMatchWorkitemHandler("RGAPI-69b88b9e-295b-4b20-83d3-7cc9fa64a9e8")</identifier>
             <parameters/>
             <name>RiotSummonerLastMatch</name>
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.riot.MatchesInfoWorkitemHandler("RGAPI-d2bfa826-1486-430b-9680-b3a7d15c39cc")</identifier>
+            <identifier>new org.jbpm.process.workitem.riot.MatchesInfoWorkitemHandler("RGAPI-69b88b9e-295b-4b20-83d3-7cc9fa64a9e8")</identifier>
             <parameters/>
             <name>RiotMatchInfo</name>
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.riot.SummonerInfoWorkitemHandler("RGAPI-d2bfa826-1486-430b-9680-b3a7d15c39cc")</identifier>
+            <identifier>new org.jbpm.process.workitem.riot.SummonerInfoWorkitemHandler("RGAPI-69b88b9e-295b-4b20-83d3-7cc9fa64a9e8")</identifier>
             <parameters/>
             <name>RiotSummonerInfo</name>
         </work-item-handler>
