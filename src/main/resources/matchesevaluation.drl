@@ -1,7 +1,7 @@
 import java.util.List;
 import net.rithms.riot.api.endpoints.match.dto.Match;
 import net.rithms.riot.api.endpoints.match.dto.TeamStats;
-import com.myproject.MatchAverages;
+import com.company.model.MatchAverages;
 
 rule insertmatchdata 
 ruleflow-group 'teamstats'
