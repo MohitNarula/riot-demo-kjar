@@ -2,7 +2,7 @@ import java.util.List;
 import net.rithms.riot.api.endpoints.match.dto.Match;
 import net.rithms.riot.api.endpoints.match.dto.TeamStats;
 import com.company.model.MatchAverages;
-# new comment updated 212378988998888
+# new comment updated 21237898899888899
 rule insertmatchdata 
 ruleflow-group 'teamstats'
 no-loop
